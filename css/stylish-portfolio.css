@@ -150,6 +150,18 @@ hr.small {
 
 /* Header */
 
+.header_title {
+   color: #fff;
+}
+
+.header.name {
+   color: #f4f4f4;
+}
+
+.header.position {
+   color: #d3d3d3;
+}
+
 .header {
     display: table;
     position: relative;
