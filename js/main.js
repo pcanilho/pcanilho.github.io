@@ -1,0 +1,70 @@
+	// Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+	
+	// Animates the Mobile skills bar
+	var isVisible = false, shown = false;
+	setInterval(
+			function(){
+				isVisible = ($("#mobile-skills-progress").css("visibility") === "hidden") ? false : true;;
+				if(isVisible && !shown){
+					$('progress').each(function() {
+						var max = $(this).val();
+						$(this).val(0).animate({ value: max }, { duration: 2000, easing: 'swing' });
+					});
+					$('#mobile-see-projects').css("visibility", "visible");
+					shown = true;
+				}else if(!isVisible && shown){
+					shown = false;
+					$('#mobile-see-projects').css("visibility", "hidden");
+				}
+			}
+		, 50
+	);
+	
+	
+	// Handles MAP controll
+	$(document).ready(function() {
+		$('#map-canvas').addClass('scrolloff');
+	});
+	
+	var isMapDisabled = true;
+	function enable_disable_map() {
+		if(isMapDisabled){
+			$('#enable-map-button').text("Disable Map");
+			$('#map-canvas').removeClass('scrolloff');
+			$('#enable-map-button').css('background-color', '#AF3131');
+			isMapDisabled = false;
+		}else{
+			$('#enable-map-button').css('background-color', '#75B246');
+			$('#enable-map-button').text("Enable Map");
+			$('#map-canvas').addClass('scrolloff');
+			isMapDisabled = true;
+		}
+	}
+	
