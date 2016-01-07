@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="css/skills-progress.css" rel="stylesheet">
+    <link href="css/component/unselectable.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -40,14 +41,17 @@
             <li>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
-            <!--<li>
-                <a href="#about" onclick = $("#menu-close").click(); >About</a>
-            </li>-->
             <li>
                 <a href="#skills" onclick = $("#menu-close").click(); >Skills</a>
             </li>
+			<li>
+                <a href="#skill-overview" onclick = $("#menu-close").click(); >Skills Overview</a>
+            </li>
             <li>
                 <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+            </li>
+			<li>
+                <a href="#blog" onclick = $("#menu-close").click(); >Blog</a>
             </li>
             <li>
                 <a href="#map-contact" onclick = $("#menu-close").click(); >Contact</a>
@@ -85,120 +89,152 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Skills &amp; Knowledge</h2>
+                    <h2 style="margin-top: -1em">Skills &amp; Knowledge</h2>
                     <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6 skills-div" id="radio-mobile-skills">
-                            <div class="skills-item">
+                    <div  class="row">
+                        <div  class="col-md-3 col-sm-6 skills-div-left skills-general-div" id="radio-mobile-skills">
+                            <div  class="skills-item">
                                 <span class="fa-stack fa-4x">
-								<img class="telecom-bg"></img>
+								<img class="telecom-bg" id="skill-img"></img>
                             </span>
-                                <h4>
-                                    <strong>Radio and Mobile Networks &amp; Voice Quality <i><small>Monitoring/SQuad8/POLQA<small></i></strong>
+                                <h4 class="unselectable">
+                                    <strong id="skill-txt">Radio and Mobile Networks &amp; Voice Quality <i><small>Monitoring/SQuad8/POLQA</small></i></strong>
                                 </h4>
-								<section id="mobile-skills-progress" class="skills-progress-container skills-general">
-									<progress value="70" max="100"></progress><span>TETRA</span>
-									<progress value="80" max="100"></progress><span>GSM</span>
-									<progress value="95" max="100"></progress><span>UMTS</span>
-									<progress value="90" max="100"></progress><span>LTE</span>
+								<section id="skill-progress" class="skills-progress-container skills-general-left">
+									<span>TETRA</span><progress value="70" max="100"></progress>
+									<span>GSM</span><progress value="80" max="100"></progress>
+									<span>UMTS</span><progress value="95" max="100"></progress>
+									<span>LTE</span><progress value="90" max="100"></progress>
 								</section>
 								
+							
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 skills-div-center skills-general-div" id="java-mobile-skills">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+                               <img class="android-bg" id="skill-img"></img>
+                            </span>
+                                <h4 class="unselectable">
+                                    <strong id="skill-txt">JAVA &amp; Android Developer <i><small>Core JAVA &amp; Android SDK 2/3/4.X development oriented to network tools/GUIs</small></i></strong>
+                                </h4>
+								<section id="skill-progress" class="skills-progress-container skills-general-center">
+									<span>Swing</span><progress value="100" max="100"></progress>
+									<span>JMS</span><progress value="70" max="100"></progress>
+									<span>Canvas</span><progress value="90" max="100"></progress>
+									<span>MAVEN/SPRING</span><progress value="80" max="100"></progress>
+									<span>Network Tools</span><progress value="93" max="100"></progress>
+									<span>Animation</span><progress value="96" max="100"></progress>
+									<span>GUI Design</span><progress value="100" max="100"></progress>
+								</section>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 skills-div-center skills-general-div" id="web-developer-skills">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+									<img class="web-dev-bg" id="skill-img"></img>
+								</span>
+                                <h4 class="unselectable">
+                                    <strong id="skill-txt">Web Developer </p><i><small>Server Deployment &amp; Live Statistics and GUI Design</small></i></strong>
+                                </h4>
+								<section id="skill-progress" class="skills-progress-container skills-general-center">
+									<span>HTML/CSS</span><progress value="100" max="100"></progress>
+									<span>JavaScript</span><progress value="85" max="100"></progress>
+									<span>JavaScript D3</span><progress value="80" max="100"></progress>
+									<span>PHP</span><progress value="100" max="100"></progress>
+									<span>GWT</span><progress value="40" max="100"></progress>
+									<span>Apache/FTP/Samba/UPnP Server</span><progress value="80" max="100"></progress>
+									<span>GUI Design</span><progress value="80" max="100"></progress>
+								</section>
+                            </div>
+                        </div>
+                       
+						<div class="col-md-3 col-sm-6 skills-div-right skills-general-div" id="sql-developer-skills">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+									<img class="sql-dev-bg" id="skill-img"></img>
+								</span>
+                                <h4 class="unselectable">
+                                    <strong id="skill-txt">UML/SQL Database Developer &amp; Admin<i><small> MySQL/MSSQL/Oracle database deployment, administration and maintenance</small></i></strong> <!-- APEX -->
+                                </h4>
+								<section id="skill-progress" class="skills-progress-container skills-general-right">
+									<span>Oracle APEX</span><progress value="50" max="100"></progress>
+									<span>MSSQL</span><progress value="100" max="100"></progress>
+									<span>SQL Server/SQL Server Studio</span><progress value="85" max="100"></progress>
+									<span>MySQL-MSSQL/PHP GUI</span><progress value="100" max="100"></progress>
+									<span>Database Optimization</span><progress value="70" max="100"></progress>
+									<span>Big-Data Database management</span><progress value="80" max="100"></progress>
+								</section>
+                            </div>
+                        </div>
+						<div class="col-md-3 col-sm-6 skills-div-left skills-general-div" id="windows-linux-skills">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+									<img class="win-linux-bg" id="skill-img"></img>
+								</span>
+                                <h4 class="unselectable">
+                                    <strong id="skill-txt">Windows Server 2012/2014 &amp; Linux CentOS/Ubuntu <i><small><p style="text-align: left; margin-left: 1em; margin-top: .5em;"><b>Linux</b> - Preffered Development workspace</p><p style="text-align: left; margin-left: 1em;"><b>Windows</b> - Preffered Server Deployment workspace</p></small></i></strong>
+                                </h4>
+								<section id="skill-progress" class="skills-progress-container skills-general-left">
+									<span>Ubuntu/Magic Box</span><progress value="60" max="100"></progress>
+									<span>Linux commands</span><progress value="55" max="100"></progress>
+									<span>RedHat 5 Servers</span><progress value="55" max="100"></progress>
+									<span>CentOS Workspace</span><progress value="90" max="100"></progress>
+									<span>Windows Server 2012/2014</span><progress value="90" max="100"></progress>
+									<span>Windows Services/Task Scheduler &amp; PowerShell/CMD</span><progress value="79" max="100"></progress>
+									<span>Integration in mobile/radio network level SNMP traps with MSSQL</span><progress value="100" max="100"></progress>
+								</section>
+                            </div>
+                        </div>
+						 <div class="col-md-3 col-sm-6 skills-div-center skills-general-div" id="ongoing-research">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+									<img class="research-bg" id="skill-img"></img>
+								</span>
+                                <h4 class="unselectable">
+                                    <strong id="skill-txt">Ongoing Research <i></p><small><ul style="vertical-align: middle"><li><b>JavaScript D3.JS Library</b> - Real-Time statistics analysis and charting</li></ul></small></i></strong>
+                                </h4>
+								<section id="skill-progress" class="skills-progress-container skills-general-left">
 								
-                               <a href="#" class="btn btn-light" id="mobile-see-projects">See Projects</a>
+								</section>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="skills-item">
-                                <span class="fa-stack fa-4x">
-                               <img class="android-bg"></img>
-                            </span>
-                                <h4>
-                                    <strong>JAVA &amp; Android Developer</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                              <!-- <a href="#" class="btn btn-light">Learn More</a>-->
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="skills-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Web Developer</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                               <!-- <a href="#" class="btn btn-light">Learn More</a>-->
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="skills-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Research</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                               <!-- <a href="#" class="btn btn-light">Learn More</a>-->
-                            </div>
-                        </div>
-						<div class="col-md-3 col-sm-6">
-                            <div class="skills-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>MySQL/SQLServer/Oracle Database deployment &amp; administration</strong> <!-- APEX -->
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                               <!-- <a href="#" class="btn btn-light">Learn More</a>-->
-                            </div>
-                        </div>
-						<div class="col-md-3 col-sm-6">
-                            <div class="skills-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Windows Server 2012/2014 &amp; Linux CentOS/Ubuntu</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                               <!-- <a href="#" class="btn btn-light">Learn More</a>-->
-                            </div>
-                        </div>
-						<div class="col-md-3 col-sm-6">
-                            <div class="skills-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Hardware monitoring - SNMP v2/3 Protocol Spectrum integration</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                               <!-- <a href="#" class="btn btn-light">Learn More</a>-->
-                            </div>
-                        </div>
-						
                     </div>
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
+			
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
+	 <section id="skill-overview" class="skills bg-primary">
+	 <h2 style="margin-left: 0.7em">Overview</h2>
+            <hr class="small" style="position: inline; margin-left: 1em; max-width: 100%">
+			<div class="row">
+			 <div  class="col-md-3 col-sm-6 skill-overview-div">
+                            <div id="skill-overview-container" class="skills-item" style="margin-bottom: 10em;">
+                                <span class="fa-stack fa-4x">
+								<img id="skill-overview-img" class="skill-overview-bg"></img>
+                            </span>
+                                <h4 id="skill-overview-h4" style="max-width: 20em;" class="unselectable">
+									<!-- ADD TITLE OF SELECTED -->
+                                    <strong id="skill-overview-txt"></strong>
+                                </h4>
+								<section id="skills-overview-progress" class="skills-progress-container">
+									<!-- ADD PROGRESS -->
+								</section>
+                              <!-- <a href="#" class="btn btn-light" id="mobile-see-projects">See Projects</a>-->
+                            </div>
+                </div>
+			</div>
+	 </section>
 
-    <!-- Callout -->
-    <aside class="callout">
+    <!-- Career -->
+    <aside class="career">
         <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
+            <h1 style="color: white; margin-bottom: 1em;">Career</h1>
         </div>
     </aside>
 
@@ -250,7 +286,7 @@
     </section>
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
+    <section class="call-to-action bg-primary" id="blog">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -262,12 +298,12 @@
                 </div>
             </div>
         </div>
-    </aside>
+    </section>
 
     <!-- Map -->
     <section id="map-contact" class="map">
 	<a onclick="enable_disable_map();" class="btn btn-lg btn-dark" id="enable-map-button">Enable Map</a>
-	   <iframe id="map-canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143322.87425360736!2d-4.372539396432729!3d55.85538065369904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1spt-PT!2sus!4v1452093233018" width="100%" height="450" frameborder="0" style="border:0; margin-top: 3em;" allowfullscreen></iframe> <br />
+	   <iframe id="map-canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143322.87425360736!2d-4.372539396432729!3d55.85538065369904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1spt-PT!2sus!4v1452093233018" width="100%" height="450" frameborder="0" style="border:0; margin-top: 2.7em;" allowfullscreen></iframe> <br />
 		<small>
 			<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143322.87425360736!2d-4.372539396432729!3d55.85538065369904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1spt-PT!2sus!4v1452093233018"></a>
 		</small>
@@ -297,24 +333,31 @@
                     </ul>
                     <hr class="small">
                     <p class="text-muted">Paulo Canilho &copy; Online Portfolio</p>
-					<p class="text-muted">Style &amp; Design &amp; Scripting by Paulo Canilho</p>
+					<p class="text-muted">Style - Design - Scripting <p class="text-muted"> by </p><p class="text-muted">Paulo Canilho</p></p>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/library/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/library/bootstrap.min.js"></script>
 	
     <!-- Custom JavaScript -->
-    <script src="js/stopTimeout.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.ui.min.js"></script>
+	
+	<!-- MAIN -->
+    <script src="js/library/stopTimeout.js"></script>
+	<script src="js/library/jquery.min.js"></script>
+	<script src="js/library/jquery.ui.min.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/livereload.js"></script>
+	<script src="js/library/livereload.js"></script>
+	
+	<!-- Skill's Progress bar animation -->
+	<!--<script src="js/component/skillsProgressBar_anim.js"></script>-->
+	<!-- Selectable skill Div -->
+	<script src="js/component/skillsMenuToggle.js"></script>
 
 </body>
 

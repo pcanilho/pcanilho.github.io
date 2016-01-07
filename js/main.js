@@ -27,28 +27,9 @@
         });
     });
 	
-	// Animates the Mobile skills bar
-	var isVisible = false, shown = false;
-	setInterval(
-			function(){
-				isVisible = ($("#mobile-skills-progress").css("visibility") === "hidden") ? false : true;;
-				if(isVisible && !shown){
-					$('progress').each(function() {
-						var max = $(this).val();
-						$(this).val(0).animate({ value: max }, { duration: 2000, easing: 'swing' });
-					});
-					$('#mobile-see-projects').css("visibility", "visible");
-					shown = true;
-				}else if(!isVisible && shown){
-					shown = false;
-					$('#mobile-see-projects').css("visibility", "hidden");
-				}
-			}
-		, 50
-	);
 	
 	
-	// Handles MAP controll
+	// Handles MAP control
 	$(document).ready(function() {
 		$('#map-canvas').addClass('scrolloff');
 	});
@@ -67,4 +48,6 @@
 			isMapDisabled = true;
 		}
 	}
+	
+	
 	
