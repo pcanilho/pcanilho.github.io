@@ -13,7 +13,7 @@ $(document).ready(function() {
 				$('#radio-mobile-skills').addClass('selected-skill-div-left');
 				displaySelectedDiv('#radio-mobile-skills');
 				scrollToSkillOverview();
-				
+				displayRadarChart('#radio-mobile-skills');
 			}
 		});
 		
@@ -28,6 +28,7 @@ $(document).ready(function() {
 				$('#java-mobile-skills').addClass('selected-skill-div-center');
 				displaySelectedDiv('#java-mobile-skills');
 				scrollToSkillOverview();
+				displayRadarChart('#java-mobile-skills');
 			}
 		});
 		
@@ -42,6 +43,7 @@ $(document).ready(function() {
 				$('#web-developer-skills').addClass('selected-skill-div-center');
 				displaySelectedDiv('#web-developer-skills');
 				scrollToSkillOverview();
+				displayRadarChart('#web-developer-skills');
 			}
 		});
 		
@@ -56,6 +58,7 @@ $(document).ready(function() {
 				$('#sql-developer-skills').addClass('selected-skill-div-right');
 				displaySelectedDiv('#sql-developer-skills');
 				scrollToSkillOverview();
+				displayRadarChart('#sql-developer-skills');
 			}
 		});
 		
@@ -70,6 +73,7 @@ $(document).ready(function() {
 				$('#windows-linux-skills').addClass('selected-skill-div-left');
 				displaySelectedDiv('#windows-linux-skills');
 				scrollToSkillOverview();
+				displayRadarChart('#windows-linux-skills');
 			}
 		});
 		
@@ -84,13 +88,76 @@ $(document).ready(function() {
 				$('#ongoing-research').addClass('selected-skill-div-center');
 				displaySelectedDiv('#ongoing-research');
 				scrollToSkillOverview();
+				displayRadarChart('#ongoing-research');
 			}
 		});
 		
 		
-		
+		// SPAN Text Anim
+		spanTextGlow();
 	});
 	
+// Display Radar Chart
+function displayRadarChart(selectedDiv){
+		var progress_data = new Array();
+		var tmp_axis = new Array(), tmp_value = new Array();
+		
+		// Get Values
+		$(selectedDiv + " progress").each(function() {
+				var val = $(this).val();
+				tmp_value.push(val);
+				
+				//var title = $(this + ' #span-progress').text();
+				
+				//var toPush = {axis:title, value:val};
+				//progress_data.push(toPush);
+		});	
+		
+		// Get Titles
+		var skipedFirst = false;
+		$(selectedDiv + " span").each(function() {
+			var title = $(this).text();
+			//title = title.substr(0, 7) + "...";
+			
+			if(skipedFirst){
+				tmp_axis.push(title);
+			}else
+				skipedFirst = true;			
+		});
+
+		var array_to_push = new Array();
+		for(var i = 0; i < tmp_axis.length; i++){
+			var tmp = {axis: tmp_axis[i], value: tmp_value[i]};
+			array_to_push.push(tmp);
+		}
+		//console.log(JSON.stringify(array_to_push));
+		
+		 
+		//Options for the Radar chart, other than default
+		var mycfg = {
+		  w: w,
+		  h: h,
+		  maxValue: 0.6,
+		  levels: 4,
+		  ExtraWidthX: 200
+		}
+		 
+		 
+		 progress_data.push(array_to_push);
+		//Call function to draw the Radar chart
+		if(array_to_push.length > 0){
+			RadarChart.draw('#skill-radar-chart', progress_data, mycfg);
+		}else{
+			removeRadioChart();
+		}
+}	
+
+// Remove SVG Radio Chart
+
+function removeRadioChart() {
+	if($('#skill-radar-chart').has('svg'))
+				$('#skill-radar-chart').empty();
+}
 
 // Grow Overview
 function growOverview(){
@@ -148,6 +215,14 @@ function removeDefaultClass(){
 		$('#skills-overview-progress').removeClass('skills-general-right');
 }
 
+// Mouseover on Progress SPAN
+function spanTextGlow(){
+	$('.skill-progress-span').mouseover(function() {
+		$('.skill-progress-span').css('color', 'red');
+	});
+}
+
+// Reset Overview
 function resetOverview(){
 	
 	// RESET IMG
@@ -161,15 +236,18 @@ function resetOverview(){
 	
 	// RESET SIZE
 	shrinkOverview();
+	
+	// REMOVE SVG
+	removeRadioChart();
 }
 
 // Animated Scrolls
-	function scrollToSkillOverview() {
-		growOverview();
-		$('html, body').animate({
-			scrollTop: $("#skill-overview").offset().top
-		}, 1000);
-		
-		
-	}
+function scrollToSkillOverview() {
+	growOverview();
+	$('html, body').animate({
+		scrollTop: $("#skill-overview").offset().top
+	}, 1000);
+	
+	
+}
 

@@ -121,7 +121,7 @@
 /* SKILL OVERVIEW */
 #skills-overview-progress {
 	float: right;
-	margin-right: 4em;
+	margin-right: 1em;
 	margin-bottom: 3em;
 	margin-top: -15em;
 	max-width: 30em;
@@ -131,7 +131,49 @@
 
 
 .skill-overview-div {
-	width: 100%;
+	z-index: 0;
+	max-width: 100%;
+	min-height: 2em
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	-moz-transition-property: all;
+	-moz-transition-duration: 1s;
+	-moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	-ms-transition-property: all;
+	-ms-transition-duration: 1s;
+	-ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.42, 0.0, 1.0, 1.0);
+}
+
+.skill-overview-div-closed {
+}
+
+.skill-overview-div-open {
+	max-height: 70%;
+}
+
+#skill-overview {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	-moz-transition-property: all;
+	-moz-transition-duration: 1s;
+	-moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	-ms-transition-property: all;
+	-ms-transition-duration: 1s;
+	-ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.42, 0.0, 1.0, 1.0);
 }
 
 
@@ -252,6 +294,15 @@ progress::-moz-progress-bar {
     padding: 50px 0;
 }
 
+.skills-row-container {
+	z-index: 10;
+	-webkit-box-shadow: 	0px -3px 7px 0.1em #d3d3d3 inset;
+	-moz-box-shadow: 		0px -3px 7px 0.1em #d3d3d3 inset;
+	box-shadow:				0px -3px 7px 0.1em #d3d3d3 inset;
+	margin-right: 0em;
+	margin-left: -1em;
+}
+
 .skills-item {
 	cursor: pointer;
 	min-height: 8em;
@@ -285,13 +336,24 @@ box-shadow: 0 0 1px 3px #d3d3d3 inset;
 		content: url(../img/android-dev-bg.png);
 }
 
+#skill-overview {
+	margin-top: 0em;
+	z-index: 1;
+}
+
 .skill-overview-bg {
-		height: 3.6em;
+	    min-height: 0.5em;
+		max-height: 3.6em;
 		margin-bottom: 0.2em;
-		z-index: 10;
+		z-index: 0;
 		content: url(../img/skill-overview.png);
 		cursor: default;
+		border-radius: 3em;
+		-webkit-box-shadow: 1px 1px 40px #0A2F49;
+		-moz-box-shadow: 1px 1px 40px #0A2F49;
+		box-shadow: 1px 1px 40px #0A2F49;
 }
+
 
 .research-bg {
 		height: 1.8em;

@@ -1,0 +1,17 @@
+#radar-chart-svg {
+	max-width: 25em;
+	background: #c2d2d5;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 1px 40px #0A2F49;
+	-moz-box-shadow: 1px 1px 40px #0A2F49;
+	box-shadow: 1px 1px 40px #0A2F49;
+	border-radius: 10px;		
+}
+
+.glowing-border { 
+	border: 2px solid #dadada;
+    border-radius: 7px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
