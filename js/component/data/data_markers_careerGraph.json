@@ -1,0 +1,43 @@
+[
+  {
+    "date": "2013-07-01",
+    "type": "ADETTI",
+    "version": ""
+  },
+  {
+    "date": "2014-01-01",
+    "type": "ADETTI",
+    "version": "Microsoft PT"
+  },
+  {
+    "date": "2014-06-01",
+    "type": "CERN",
+    "version": "Android"
+  },
+  {
+    "date": "2014-06-01",
+    "type": "ADETTI",
+    "version": "Microsoft PT"
+  },
+  
+  {
+    "date": "2014-09-15",
+    "type": "CERN",
+    "version": "Android"
+  },
+  {
+    "date": "2015-01-01",
+    "type": "CERN",
+    "version": "Telecom"
+  },
+  {
+    "date": "2015-01-01",
+    "type": "Graduation",
+    "version": "LETI"
+  },
+  {
+    "date": "2016-02-01",
+    "type": "CERN",
+    "version": "Telecom"
+  }
+]
