@@ -124,7 +124,6 @@ form.signup input.form-control:focus {
 #wrapper {
 	text-align: center;
 	padding: 50px 0;
-	background: url(../img/main-bg.jpg) no-repeat center top;
 	background-attachment: relative;
 	background-position: center center;
 	height: 95vh;
@@ -133,7 +132,7 @@ form.signup input.form-control:focus {
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
-	opacity: 0.4;
+	opacity: 1;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -150,11 +149,14 @@ form.signup input.form-control:focus {
 	font-size: 45px;
 	font-weight: 900;
 	letter-spacing: -1px;
+	opacity: 1 !important;
+	z-index: 1000;
 }
 
 h2.subtitle {
 	color: #fff;
 	font-size: 24px;
+	opacity: 1;
 }
 
 /* countdown */
@@ -163,6 +165,7 @@ h2.subtitle {
 	color: #fff;
 	line-height: 1.1em;
 	margin: 40px 0 60px;
+	opacity: 1;
 }
 
 
@@ -171,4 +174,5 @@ p.copyright {
 	margin-top: 50px;
 	color: #fff;
 	text-align: center;
+	opacity: 1;
 }	
