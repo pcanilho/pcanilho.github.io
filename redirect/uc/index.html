@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/alt-favicon.png">
+
+    <title>Paulo Canilho - Online Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+
+    <!-- siimple style -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  
+  <style>
+  video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(assets/video/bg-video-poster.jpg) no-repeat;
+    background-size: cover; 
+	
+}
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+.container h1 {
+    color: white;
+}
+  </style> 
+	<video autoplay loop muted poster="assets/video/bg-video-poster.jpg" id="bgvid">
+		<source src="assets/video/bg-video.mp4" type="video/mp4">
+	</video>
+	<div id="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<h1>Paulo Canilho - Online Portfolio</h1>
+					<h2 class="subtitle">This website will land in:</h2>
+					<div id="countdown"></div>
+					<form class="form-inline signup" role="form">
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
+					  </div>
+					  <button type="submit" class="btn btn-theme">Get notified of the release!</button>
+					</form>		
+					
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+						<p class="copyright">Copyright &copy; 2016. Al rights reserved. <a href="mailto:pcanilho.teleng@gmail.com">Paulo Canilho</a></p>
+                        <!-- 
+                            All links in the footer should remain intact. 
+                            Licenseing information is available at: http://bootstraptaste.com/license/
+                            You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=WeBuild
+                        -->
+				</div>
+				
+			</div>		
+		</div>
+		
+	</div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.countdown.min.js"></script>
+	<script type="text/javascript">
+  $('#countdown').countdown('2016/02/23', function(event) {
+    $(this).html(event.strftime('%d days <br /> %H:%M:%S'));
+  });
+ 
+</script>
+ <footer>
+	<p style="text-align: center; color: #a4a4a4">Background video credits to <a href="https://www.youtube.com/watch?v=Ip2ZGND1I9Q&feature=iv&src_vid=spZ40Wm5lXg&annotation_id=annotation_100034">Robert Gawdzik</a></p>
+  </footer>
+  </body>
+</html>
