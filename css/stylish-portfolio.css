@@ -1,4 +1,4 @@
-
+	
 html,
 body {
     width: 100%;
@@ -18,13 +18,70 @@ small {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+	
 }
 
 .text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 4.5em;
+	 margin: 0;
+    padding-top: 2vh;
+    font-size: 4.5vw;
     font-weight: 700;
+    vertical-align: middle;   
+	color: white;
+}
+
+.top-frame{
+	display: table-cell;
+    text-align: center;
+	background-color: rgba(0,0,0,0.4);
+	vertical-align: middle; 
+}
+
+.text-vertical-center .header_title {
+    margin: 0;
+    padding-top: 2vh;
+    font-size: 4.5vw;
+    font-weight: 700;
+    vertical-align: middle;   
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	border: none;
+	width: 60vw;
+	cursor: default;
+}
+
+.text-vertical-center .header_name {
+    font-size: 2.5vw;
+    font-weight: 700;
+    vertical-align: middle;   
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	border: none;
+	width: 60vw;
+	cursor: default;
+}
+
+.text-vertical-center .header_position {
+    margin: 0;
+    padding-bottom: 2vh;
+    font-size: 2.5vw;
+    font-weight: 700;
+    vertical-align: middle;   
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	border: none;
+	width: 60vw;
+	cursor: default;
+}
+
+.text-vertical-center h2 {
+    font-size: 3vw;
+	color: black;
+}
+
+.text-vertical-center h3 {
+    font-size: 3vw;
+	color: black;
 }
 
 /* Custom Button Styles */
@@ -59,6 +116,14 @@ small {
 
 hr.small {
     max-width: 100px;
+}
+
+/* Explore button */
+.explore-button {
+	padding-left: 20vw;
+	padding-right: 20vw;
+	font-size: 2.5vw;
+	margin-top: 20vh;
 }
 
 /* Side Menu */
@@ -158,7 +223,8 @@ hr.small {
 
 .header_position {
    color: #d3d3d3;
-   margin-bottom: 3em;
+   margin-bottom: -10em;
+
 }
 
 .header {
@@ -166,11 +232,12 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/page-bg.jpg) no-repeat center center scroll;
+    background: url(../img/office.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+	 background-attachment: fixed;
 }
 
 /* Skill overview */
@@ -189,6 +256,11 @@ hr.small {
 /* Callout */
 
 .career {
+	-webkit-transition: all 2s ease 0s;
+    -moz-transition: all 2s ease 0s;
+    -ms-transition: all 2s ease 0s;
+    -o-transition: all 2s ease 0s;
+    transition: all 2s ease 0s;
     display: table;
     width: 100%;
     height: 400px;
@@ -198,6 +270,72 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+	 background-attachment: fixed;
+}
+
+.career #career-tittle {
+	 font-size: 4.5vw;
+    font-weight: 700;
+    vertical-align: middle;   
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	border: none;
+	width: 60vw;
+	cursor: default;
+	/*
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;*/
+}
+
+/* Toggle Button */
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.cmn-toggle-round + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+input.cmn-toggle-round + label:before,
+input.cmn-toggle-round + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+input.cmn-toggle-round + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+input.cmn-toggle-round + label:after {
+  width: 58px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: margin 0.4s;
+}
+input.cmn-toggle-round:checked + label:before {
+  background-color: #8ce196;
+}
+input.cmn-toggle-round:checked + label:after {
+  margin-left: 60px;
 }
 
 /* Portfolio */
@@ -208,10 +346,18 @@ hr.small {
 
 .portfolio-item {
     margin-bottom: 30px;
+	max-height: 60em;
+}
+
+
+.wrapper .sb-slider {
+	margin-left: 1em;
 }
 
 .img-portfolio {
+	cursor: pointer;
     margin: 0 auto;
+	max-height: 15em;
 }
 
 .img-portfolio:hover {
@@ -226,20 +372,55 @@ hr.small {
 
 .call-to-action .btn {
     margin: 10px;
+
+}
+
+/* PERIF */
+#portfolio-cern-logo {
+	width: 4em;
+	height: 4em;
+	float: right;
+}
+
+#portfolio-cern-logo:hover  {
+	opacity: 0.9;
+}
+
+.col {width:365px; padding:0 5px; float:left;}
+
+.CCspace {	
+	width:8.7em; 
+	height:8.6em; 
+	padding: 2em;; 
+	margin-left: 1em;
+	float:right;
+	background: url(../img/portfolio/cern.png) no-repeat top left;
+	background-size: 8.438em 8.438em;
+	display: inline-block;
+}
+
+.CCspace-left {	
+	width:8.7em; 
+	height:4.6em; 
+	padding: 2em;
+	margin-right: 1em;
+	float:left;
+	background: url(../img/portfolio/data/microsoft-logo.png) no-repeat top left;
+	background-size: 8.438em 4.438em;
+	display: inline-block;
 }
 
 /* Map */
 
 #enable-map-button {
-	position: absolute;
-	width: 100%;
-	background-color: #75B246;
+	position: relative;
+	background-color: #fff;
 	color: black;
-	margin-top: -0.5em;
+	margin:0 auto -2em;
+	background-color: rgba(0, 0, 0, 0);
 }
 
 #enable-map-button:hover {
-	background-color: #777777;
 }
 
 .map {
@@ -258,8 +439,34 @@ footer {
     padding: 100px 0;
 }
 
-/* MAP CANVAS */
+/* Map Canvas */
 
 .scrolloff {
-        pointer-events: none;
-    }
+    pointer-events: none;
+}
+	
+/* Navigate down arrow */
+.navigate-down-arrow-separator {
+	margin-left: 30vw;
+	margin-right: 30vw;
+	opacity: 0.6;
+}
+
+.navigate-down-arrow {
+	cursor: pointer;
+	width: 2vw;
+	height: 2vh;
+	position: relative;
+	bottom: 1vh;
+	right: 1vw;
+	content: url(../img/portfolio/components/arrow-down.png);
+	background: url(../img/portfolio/components/arrow-down.png) no-repeat;
+	background-size: 2vw 2vh;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.navigate-down-arrow:hover {
+	content: url(../img/portfolio/components/arrow-down-hover.png);
+	background: url(../img/portfolio/components/arrow-down-hover.png) no-repeat;
+	background-size: 2vw 2vh;
+}

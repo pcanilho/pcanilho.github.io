@@ -3,12 +3,13 @@
 
 <head>
 	<!-- REDIRECT -->
-	<meta http-equiv="refresh" content="0; url=redirect/uc/index.html" />
+	<!--<meta http-equiv="refresh" content="0; url=redirect/uc/index.html" />
 	<!-- -->
+	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="pcanilho paulo canilho Paulo-Canilho CERN android java ssh sh cplusplus c++ python google www.google.com www.google.pt">
+    <meta name="description" content="Online Portfolio of Telecommunications & Radio Enginneer/Software Developer & Researcher - Paulo Canilho">
     <meta name="author" content="">
 
     <title>Paulo Canilho - Online Portfolio</title>
@@ -20,6 +21,20 @@
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="css/skills-progress.css" rel="stylesheet">
     <link href="css/component/unselectable.css" rel="stylesheet">
+    <link href="css/component/portfolio-item.css" rel="stylesheet">
+    <link href="css/component/top_menu.css" rel="stylesheet">
+	
+	<!-- TABBED CONTENT - PROJECTS -->
+    <link href="css/component/tabbedProjects.css" rel="stylesheet">
+	
+	<!-- SDEV SLIDESHOW -->
+    <link href="css/component/sdev-slideshow.css" rel="stylesheet">
+	
+	<!-- SLIDESHOW 
+    <link href="css/component/slideshow.css" rel="stylesheet">-->
+	
+	<!-- PHOTO CLICER CSS -->
+    <link href="css/component/photoSlicer.css" rel="stylesheet">
     
     <!-- Radar Chart -->
     <link href="css/component/skill_radarChart.css" rel="stylesheet">
@@ -51,31 +66,39 @@
             </li>
             <li>
                 <a href="#skills" onclick = $("#menu-close").click(); >Skills</a>
+				  <li>
+                <a href="#skill-overview" onclick = $("#menu-close").click(); >Skill Overview</a>
+				</li>
+            </li>
+			
+			<li>
+                <a href="#career" onclick = $("#menu-close").click(); >Career</a>
             </li>
 			<li>
-                <a href="#skill-overview" onclick = $("#menu-close").click(); >Skills Overview</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-			<li>
-                <a href="#blog" onclick = $("#menu-close").click(); >Blog</a>
-            </li>
-            <li>
-                <a href="#map-contact" onclick = $("#menu-close").click(); >Contact</a>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
             </li>
         </ul>
     </nav>
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1 class="header_title">Online Portfolio</h1>
-            <h2 class="header_name">Paulo Canilho</h2>
-	    <h3 class="header_position">Telecom Engineer &amp; JAVA Developer</h3>
-            <br>
-            <a href="#skills" class="btn btn-dark btn-lg">Explore</a>
-        </div>
+		
+			<div class="text-vertical-center">
+				<button class="header_title" disabled>Online Portfolio</button>
+				<button class="header_name" disabled>Paulo Canilho</button>
+				<button class="header_position" disabled>Telecom Engineer &amp; JAVA Developer</button>
+				<a href="#skills" class="btn btn-dark btn-lg explore-button">Explore</a>
+			</div>
+			<!-- HEADER OVERLAY-->
+			<div class="top-frame"></div>
+			
+		<!--<div>
+			<img id="online-portfolio-button"> </img>
+		</div>-->
+		<!-- NAVIGATE DOWN-->
+		<div>
+			<img id="navigate-down-skills" class="navigate-down-arrow" style="position: absolute; bottom: 3vh;"></img>
+		</div>
     </header>
 
     <!-- About -->
@@ -93,7 +116,7 @@
    <!-- </section>-->
 
     <!-- Services -->
-    <section id="skills"  class="skills bg-primary skills-row-container">
+    <section id="skills"  class="skills bg-primary skills-row-container bottom-frame">
         <div class="container" >
             <div class="row text-center  ">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -103,7 +126,7 @@
                         <div  class="col-md-3 col-sm-6 skills-div-left skills-general-div" id="radio-mobile-skills">
                             <div  class="skills-item">
                                 <span class="fa-stack fa-4x">
-								<img class="telecom-bg" id="skill-img"></img>
+								<img src="img/telecom-bg.png" class="telecom-bg" id="skill-img"></img>
                             </span>
                                 <h4 class="unselectable">
                                     <strong id="skill-txt">Radio and Mobile Networks &amp; Voice Quality <i><small>Monitoring/SQuad8/POLQA</small></i></strong>
@@ -121,7 +144,7 @@
                         <div class="col-md-3 col-sm-6 skills-div-center skills-general-div" id="java-mobile-skills">
                             <div class="skills-item">
                                 <span class="fa-stack fa-4x">
-                               <img class="android-bg" id="skill-img"></img>
+                               <img src="img/android-dev-bg.png" class="android-bg" id="skill-img"></img>
                             </span>
                                 <h4 class="unselectable">
                                     <strong id="skill-txt">JAVA &amp; Android Developer <i><small>Core JAVA &amp; Android SDK 2/3/4.X development oriented to network tools/GUIs</small></i></strong>
@@ -140,7 +163,7 @@
                         <div class="col-md-3 col-sm-6 skills-div-center skills-general-div" id="web-developer-skills">
                             <div class="skills-item">
                                 <span class="fa-stack fa-4x">
-									<img class="web-dev-bg" id="skill-img"></img>
+									<img src="img/web_dev.png" class="web-dev-bg" id="skill-img"></img>
 								</span>
                                 <h4 class="unselectable">
                                     <strong id="skill-txt">Web Developer </p><i><small>Server Deployment &amp; Live Statistics and GUI Design</small></i></strong>
@@ -161,7 +184,7 @@
 						<div class="col-md-3 col-sm-6 skills-div-right skills-general-div" id="sql-developer-skills">
                             <div class="skills-item">
                                 <span class="fa-stack fa-4x">
-									<img class="sql-dev-bg" id="skill-img"></img>
+									<img src="img/sql_dev.png" class="sql-dev-bg" id="skill-img"></img>
 								</span>
                                 <h4 class="unselectable">
                                     <strong id="skill-txt">UML/SQL Database Developer &amp; Admin<i><small> MySQL/MSSQL/Oracle database deployment, administration and maintenance</small></i></strong> <!-- APEX -->
@@ -179,7 +202,7 @@
 						<div class="col-md-3 col-sm-6 skills-div-left skills-general-div" id="windows-linux-skills">
                             <div class="skills-item">
                                 <span class="fa-stack fa-4x">
-									<img class="win-linux-bg" id="skill-img"></img>
+									<img src="img/win_linux.png" class="win-linux-bg" id="skill-img"></img>
 								</span>
                                 <h4 class="unselectable">
                                     <strong id="skill-txt">Windows Server 2012/2014 &amp; Linux CentOS/Ubuntu <i><small><p style="text-align: left; margin-left: 1em; margin-top: .5em; "><b>Linux</b> - Preffered Development workspace</p><p style="text-align: left; margin-left: 1em;"><b>Windows</b> - Preffered Server Deployment workspace</p></small></i></strong>
@@ -198,7 +221,7 @@
 						 <div class="col-md-3 col-sm-6 skills-div-center skills-general-div" id="ongoing-research">
                             <div class="skills-item">
                                 <span class="fa-stack fa-4x">
-									<img class="research-bg" id="skill-img"></img>
+									<img src="img/win_linux.png" class="research-bg" id="skill-img"></img>
 								</span>
                                 <h4 class="unselectable">
                                     <strong id="skill-txt">Ongoing Research <i></p><small><b>JavaScript D3.JS Library</b> - Real-Time statistics analysis and charting</small></i></strong>
@@ -218,16 +241,19 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
+		<div>
+			<img id="navigate-down-skills-overview" style="float: right;" class="navigate-down-arrow"></img>
+		</div>
     </section>
 	 <section id="skill-overview" class="skills bg-primary">
 	 <h2 style="margin-left: 0.7em">Overview</h2>
-            <hr class="small " style="position: inline; margin-left: 1em; max-width: 100%">
+            <hr class="small " style="position: inline; margin-left: 1em; max-width: 100%"></hr>
 			<div class="row ">
 								<!-- Overview left -->
 				<div  class="col-md-3 col-sm-6 skill-overview-div skill-overview-div-closed" style="margin-right: 1em;">
                             <div id="skill-overview-container" class="skills-item" style="margin-bottom: 10em;">
                                 <span class="fa-stack fa-4x">
-								<img id="skill-overview-img" class="skill-overview-bg"></img>
+								<img src="img/skill-overview.png" id="skill-overview-img" class="skill-overview-bg"></img>
                             </span>
                                 <h4 id="skill-overview-h4" style="max-width: 20em;" class="unselectable">
 									<!-- ADD TITLE OF SELECTED -->
@@ -269,12 +295,15 @@
                             </div>
                 </div> 
 			</div>
+			<div>
+				<img id="navigate-down-career"  style="float: right; margin-right: -2em; margin-top: -1em;" class="navigate-down-arrow"></img>
+			</div>
 	 </section>
 
     <!-- Career -->
-    <aside class="career">
+    <aside id="career" class="career">
         <div class="text-vertical-center">
-            <h1 style="color: white; margin-bottom: 1em;">Career</h1>
+            <button id="career-tittle" style="color: white; margin-bottom: 1em;">Career</button>
         </div>
     </aside>
 	<!--<div id="careerGraph_container"> </div>-->
@@ -286,64 +315,413 @@
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 style="color: black">Projects &amp; Work</h2>
                     <hr class="small" style="border-color: black">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="/CERN/">
-                                    <img class="img-portfolio img-responsive" src="img/projects/project-cern-2.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- LEFT ROW - AREAS -->
+				   <!-- <div class="row">
+                         <div class="col-md-6">
+                             <div class="portfolio-item">
+                                 <a id="portfolio-telecom-engineer">
+                                     <img class="img-portfolio img-responsive" src="img/portfolio/telecom-work-bg.png">
+                                 </a>
+                             </div>
+                         </div>
+                         <div class="col-md-6">
+                             <div class="portfolio-item">
+					 				<a id="portfolio-software-developer">
+                                     <img class="img-portfolio img-responsive" src="img/portfolio/telecom-work.jpg">
+                                 </a>
+                             </div>
+                         </div>
+                     </div>-->
+					<!-- RIGHT ROW - DISPLAY -->
+					<div class="tabs">
+						<ul class="tab-links">
+							<li><a href="#tab1"><img class="img-portfolio img-responsive" src="img/portfolio/telecom-work.jpg" style="border-radius: 10px"><hr class="tab-img">Telecommunications &amp; Radio Engineering
+                                     </a>
+							</li>
+							<li><a href="#tab2"> <img class="img-portfolio img-responsive" src="img/portfolio/sdev.PNG" style="border-radius: 10px"><hr class="tab-img">Software Development</a>
+                                    
+							</li>
+						</ul>
+						 
+						<div class="tab-content">
+							<div id="tab1" class="tab">
+							
+						 
+					
+														
+						
+						<div id="project-display-container">
+							<div class="row">
+								 <div class="col-md-4">
+									<div class="portfolio-item">
+											  <!-- Photos Wrapper -->
+											<div class="wrapper" >
+
+												<ul id="sb-slider" class="sb-slider" style="z-index: 1; max-height: 50vh">
+													<li>
+														<a><img src="img/portfolio/telecom-work.jpg" /></a>
+														<div class="sb-description">
+															<h3>Master Unit &amp; Remote Unit Gateway Configuration</h3>
+														</div>
+													</li>
+													<li>
+														<a><img src="img/portfolio/spectrum-analyser.jpg"/></a>
+														<div class="sb-description">
+															<h3>Network Analysis &amp; General Troubleshooting</h3>
+														</div>
+													</li>
+													<li>
+														<a><img src="img/portfolio/telecom-work-2.jpg" /></a>
+														<div class="sb-description">
+															<h3>WiFi 2.4GHz/Dual Band Troubleshooting</h3>
+														</div>
+													</li>
+													<li>
+														<a><img src="img/portfolio/telecom-work-3.jpg" /></a>
+														<div class="sb-description">
+															<h3>Master Unit &amp; Remote Unit direct signal analysis</h3>
+														</div>
+													</li>
+													
+												</ul>
+
+												<div style="z-index: 0;" id="shadow" class="shadow"></div>
+
+												<div id="nav-arrows" class="nav-arrows">
+													<img class="photoSlicer-arrow" src="img/objects/arrow-right.png"></img>
+													<img class="photoSlicer-arrow" src="img/objects/arrow-left.png"></img>
+												</div>
+
+												<!-- Photos Navigation -->
+												<div id="nav-dots" class="nav-dots">
+													<span class="nav-dot-current"></span>
+													<span></span>
+													<span></span>
+													<span></span>											
+												</div>
+
+										</div>
+										<!-- /Photos Wrapper -->
+									</div>
+									<!-- WORK -->
+										
+								</div>
+								<div class="portfolio-item">
+									<div>
+										<hr>
+										<h3>Telecommunications &amp; Radio Engineer 
+										<hr>
+											<p> 
+												<a href="http://www.cern.ch"></a>
+											</p>
+										</h3>
+									
+										<p>
+
+											<div  style="text-align: justify; text-justify: inter-word;" id="overall">
+												<div class="col" style="margin-left: 1em; width: 62%; max-width: 90%;">
+													<h4 >
+														Working at CERN
+													</h4>
+													
+													<span class="CCspace">&nbsp;</span><p>&emsp;&ensp;
+													I have been working at CERN (European Organization for Nuclear Research) in Switzerland for the last year and a half. In my technical student internship with CERN I was working as a Telecommunications & Radio Engineer providing 4th level support for CERN users (3000+ workers) while migrating the old mobile network operator, and correlated equipment, from Sunrise to Swisscom. Afterwards, in order to achieve network stability, coverage and supply high throughputs over the mobile networks technologies: GSM, UMTS and LTE, I became the responsible for the mobile monitoring system's deployment, implementation, sysadmin and dba.
+													</p>
+													In this project I also had the opportunity to work with TETRA (currently being used by CERN's fire brigade, security teams and tunnel access staff, engineers, physicists and technicians) & TETRAPOL radio technology including: monitoring system, network troubleshooting, SEPURA equipment programming, etc.
+													</p>
+													Before working at CERN I also worked as a research assistant in ISCTE-IUL - ADETTI research group which is directly affiliated with Microsoft PT&reg;, receiving a Student Grant as a junior Research Assistant. On this project I had the opportunity to work with an interdisciplinary team of both engineers and architects where the common goal was machine learning involving: shape grammars, LISP language implementation and JAVA 7 migration and complex algorithmic calculations.
+													<hr style="margin-left: 5em; margin-right: 5em;">
+													<h4>Collaboration</h4>
+													<h5><b>Internal</b></h5>
+													<ul>
+														<li>IT-CS-CS/TR</li>
+														<li>IT-CS-CT</li><li>IT-CS-CD</li>
+														<li>IT-GS</li>
+													</ul>
+													<h5><b>External</b></h5>
+													<ul>	
+														<li>SwissQual&reg; <i style="float: right;">Mobile Network Monitoring</i></li>
+														<li>Decodio&reg; <i style="float: right;">TETRA Network Monitoring</i></li>
+														<li>SEPURA&reg;<i style="float: right;">TETRA Equipment</i></li>
+														<li>Swisscom&reg; <i style="float: right;">Mobile network and repeater system equipment</i>
+														</li>
+													</ul>
+												</div>
+												<div class="col">
+												
+												</div>
+											</div>
+										</p>
+										
+									</div>
+								</div>
+							</div>
+							<!-- PROJECTS -->
+							<div class="row">
+								 <div class="col-md-4" >
+									<hr>
+									<h3>Projects and Collaboration</h3>
+									<hr>
+										<div id="projects-choice" class="portfolio-item project-choice" style="text-align:left;">
+											<h4>Mobile Network - GSM/UMTS/LTE</h4>
+											<input id="project0" class="project-choice-radio" type="radio" name="projects" value="Mobile Network Monitoring System">
+											<label class="project-choice-label" for="project0" style="min-width: 90%;">Mobile Network Monitoring System	<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<input id="project2" class="project-choice-radio" type="radio" name="projects" value="GIS PORTAL">
+											<label class="project-choice-label" for="project2" style="min-width: 90%;">GIS PORTAL						<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<input id="project3" class="project-choice-radio" type="radio" name="projects" value="Real-time dashboard system">
+											<label class="project-choice-label" for="project3" style="min-width: 90%;">Real-time dashboard system		<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<hr>
+											<h4>TETRA Network</h4>
+											<input id="project1" class="project-choice-radio" type="radio" name="projects" value="TETRA Monitoring System">
+											<label class="project-choice-label" for="project1" style="min-width: 90%;">TETRA Monitoring System			<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<hr>
+												
+										</div>
+								</div>
+								<!-- PROJECT DETAILS -->
+								 <div class="col-md-8" style="margin-bottom: 5em;">
+									<hr>
+									<h3>Details</h3>
+									<hr>
+									<div id="project-details-container" class="portfolio-item" style="text-align: center;">
+										<span id="project-details-txt" class="project-details-txt" style="position: relative;">
+															
+										</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							</div>
+							</div>
+							
+									<div id="tab2" class="tab">
+										<div id="project-display-container">
+											<div class="row">
+												 <div class="col-md-12">
+													<div class="portfolio-item">
+															  <!-- Photos Wrapper -->
+															
+																		
+
+
+
+																		<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1200px; height: 400px; overflow: hidden; visibility: hidden;">
+																		<!-- Loading Screen -->
+																		<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+																		<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+																		<div style="position:absolute;display:block;background:url('img/portfolio/data/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+																		</div>
+																		<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1200px; height: 400px; overflow: hidden;">
+																		<div data-p="112.50" style="display: none;">
+																		<img data-u="image" src="img/portfolio/data/adetti.PNG" />
+																		<div data-u="thumb">ADETTI - LINUX Caixa Mágica&reg;- Research Unit</div>
+																		</div>
+																		<div data-p="112.50" style="display: none;">
+																		<img data-u="image" src="img/portfolio/data/microsoft-pt.PNG" />
+																		<div data-u="thumb">MICROSOFT PT - Research Unit - AI &amp; Machine Learning</div>
+																		</div>
+																		<div data-p="112.50" style="display: none;">
+																		<img data-u="image" src="img/portfolio/cern.png" />
+																		<div data-u="thumb">CERN BE-BI-SW - Circular/Linear Accelerator's Beam analysis</div>
+																		</div>
+																		</div>
+																		<!-- Thumbnail Navigator -->
+																		<div data-u="thumbnavigator" class="jssort09-600-45" style="position:absolute;bottom:0px;left:0px;width:1200px;height:45px;">
+																		<div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
+																		<!-- Thumbnail Item Skin Begin -->
+																		<div data-u="slides" style="cursor: default;">
+																		<div data-u="prototype" class="p">
+																		<div data-u="thumbnailtemplate" class="t"></div>
+																		</div>
+																		</div>
+																		<!-- Thumbnail Item Skin End -->
+																		</div>
+																		<!-- Bullet Navigator -->
+																		<div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+																		<div data-u="prototype" style="width:12px;height:12px;"></div>
+																		</div>
+																		<!-- Arrow Navigator -->
+																		<span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
+																		<span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
+																		</div>
+																	
+																		<script>
+																		
+																		</script>
+														<!-- /Photos Wrapper -->
+													</div>
+													<!-- WORK -->
+														
+												</div>
+												</div>
+												<div class="row">
+													<div class="portfolio-item">
+														<div>
+															<hr>
+															<h3>Software Developer &amp; Researcher 
+															<hr>
+															</h3>
+														
+															<p>
+																<div  style="text-align: justify; text-justify: inter-word;" id="overall">
+																	<div class="col" style="margin-left: 1em; width: 95%;">
+																		<h4 >
+																			ADETTI - MICROSOFT PT - CERN
+																		</h4>
+																		<span class="CCspace">&nbsp;</span><p>&emsp;&ensp; 
+																		I have been working at CERN&reg; (European Organization for Nuclear Research) in Switzerland for the last year and a half. On the first half year, I worked as a software developer for the beams section, where I became responsible for the development and integration of a monitoring system in Linux and Android. This system’s main role was to query large amounts of data from the detectors in real-time and then filter all the data, via a fully customizable XML system. This data would then be downloaded on-demand by the users over the Android applications that I developed. Afterwards, I got to work as a Telecommunications & Radio Engineer providing 4th level support for CERN users (3000+ workers) while migrating the old mobile network operator, and correlated equipment, from Sunrise to Swisscom. Afterwards, in order to achieve network stability, coverage and supply high throughputs over the mobile networks technologies: GSM, UMTS and LTE, I became the responsible for the mobile monitoring system's deployment, implementation, sysadmin and dba.
+																		<p>																	In this project I also had the opportunity to work create real-time statistics analysis tools using JavaScript third party libraries such as: D3, AnyChart, JQuery, etc. In order to supply a user friendly interface for the users, I created a dynamic and long term self-sustainable query system. This system queries in real-time values on-demand (PHP to MSSQL) for each probe on each mobile network technology and then uses this data to create dynamic charts and plot data with a valid GPS location on a map, using Google Maps API. Since one of CERN’s primary goals is data security, I also had to take into account the input system by adding prepared statements, isolating the Webadmin access from the Webroot location and test the code thoroughly.</p>
+																		<p>
+																		<span class="CCspace-left">&nbsp;</span>
+																		Before working at CERN I also worked as a research assistant in ISCTE-IUL - ADETTI&reg; research group which is directly affiliated with Microsoft PT, receiving a Student Grant as a junior Research Assistant. On this project I had the opportunity to work with an interdisciplinary team of both engineers and architects where the common goal was machine learning involving: shape grammars, LISP language implementation and JAVA 7 migration, complex algorithmic calculations, etc.</p>
+																		<hr style="margin-left: 5em; margin-right: 5em;">
+																		<h4>Languages used on official projects and work:</h4>
+																		<ul>
+																			<li>JAVA 7/8 native libraries</li>
+																			<li>Android 2.3+</li>
+																			<li>PHP</li>
+																			<li>HTML/CSS/JavaScript</li>
+																			<li>Common LISP/Prolog</li>
+																			<li>MySQL, Sybase SQL and MSSQL</li>
+																			<li>LISP and Prolog</li>
+																		</ul>
+																		
+																	</div>
+																	<div class="col">
+																	
+																	</div>
+																</div>
+															</p>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- PROJECTS -->
+											<div class="row">
+												 <div class="col-md-5" >
+													<hr>
+													<h3>Projects and Research</h3>
+													<hr>
+														<div id="projects-choice" class="sdev" style="text-align:left;">
+															<div id="sdev">
+															<h4>Artificial Intelligence</h4>
+															<input id="project-sdev-0" class="project-choice-radio" type="radio" name="projects" value="Shape Grammars in LISP - JAVA">
+															<label  class="project-choice-label project-sdev-input" for="project-sdev-0" style="width: 90%;">Shape Grammars in LISP - JAVA<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<hr>
+															<h4>Web Development</h4>
+															<input id="project-sdev-1" class="project-choice-radio" type="radio" name="projects" value="Real-time dashboard system">
+															<label class="project-choice-label project-sdev-input" for="project-sdev-1" style="width: 90%;">Mobile Network Monitoring System<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<h4>Android development</h4>
+															<input id="project-sdev-2" class="project-choice-radio" type="radio" name="projects" value="Android Beam Detector">
+															<label class="project-choice-label project-sdev-input" for="project-sdev-2" style="width: 90%;">CERN's beam detector statistics engine<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<hr>
+															<h4>Hobbies</h4>
+															<input id="project-sdev-3" class="project-choice-radio" type="radio" name="projects" value="SDR and DVB-T - TETRA Monitoring">
+															<label class="project-choice-label project-sdev-input" for="project-sdev-3" style="width: 90%;">SDR and DVB-T - TETRA Monitoring<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<input id="project-sdev-4" class="project-choice-radio" type="radio" name="projects" value="JAVA and PowerShell Installation Tools">
+															<label class="project-choice-label project-sdev-input" for="project-sdev-4" style="width: 90%;">JAVA and PowerShell Installation Tools<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<input id="project-sdev-5" class="project-choice-radio" type="radio" name="projects" value="JAVA 8 - SMS Gateway (AT COMMANDS)">
+															<label  class="project-choice-label project-sdev-input" for="project-sdev-5" style="width: 90%;">JAVA 8 - SMS Gateway (AT COMMANDS)<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<hr>
+															<h4>3D Engine Developer and Programmer</h4>
+															<input id="project-sdev-6" class="project-choice-radio" type="radio" name="projects" value="TETRA Monitoring System">
+															<label  class="project-choice-label project-sdev-input" for="project-sdev-6" style="width: 90%;">JAVA Native Library &amp; LWJGL<img src="img/portfolio/components/project-sdev.png"/></label>
+															<input id="project-sdev-7" class="project-choice-radio" type="radio" name="projects" value="TETRA Monitoring System">
+															<label class="project-choice-label project-sdev-input" for="project-sdev-6" style="width: 90%;">C++ CryEngine&reg;<img src="img/portfolio/components/project-sdev.png"/></label>
+															<input id="project-sdev-8" class="project-choice-radio" type="radio" name="projects" value="TETRA Monitoring System">
+															<label  class="project-choice-label project-sdev-input" for="project-sdev-8" style="width: 90%;">C++ Unreal Development Kit&reg;<img src="img/portfolio/components/project-sdev.png"/></label>
+															<input id="project-sdev-9" class="project-choice-radio" type="radio" name="projects" value="TETRA Monitoring System">
+															<label  class="project-choice-label project-sdev-input" for="project-sdev-9" style="width: 90%;">Unity 3D&reg;<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<hr>
+															<h4>Human-Resources Tools</h4>
+															<input id="project-sdev-10" class="project-choice-radio" type="radio" name="projects" value="Waiting Queue List">
+															<label id="project-sdev-input" class="project-choice-label" for="project-sdev-10" style="width: 90%;">Waiting Queue List<img src="img/portfolio/components/project-sdev.png"/></label>
+															<br>
+															<hr>
+															</div>
+														</div>
+												</div>
+												<!-- PROJECT DETAILS -->
+												 <div class="col-md-7" style="margin-bottom: 5em;">
+													<hr>
+													<h3>Details</h3>
+													<hr>
+													<div id="project-details-container" class="portfolio-item" style="text-align: justify;">
+														<span id="project-details-txt" class="project-details-txt" style="position: relative;">
+																			
+														</span>
+														</p>
+													
+													</div>
+													
+												</div>
+											</div>
+											
+											
+										</div>
+
+								
+									</div>
+						</div>
+						
+						
+						
+							
+						
+					</div>
+			
+					<!-- RIGHT ROW - DISPLAY -->
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <!--<a href="#" class="btn btn-dark">View More Items</a>-->
+					
                 </div>
+				
                 <!-- /.col-lg-10 -->
             </div>
+			
             <!-- /.row -->
         </div>
+		
         <!-- /.container -->
     </section>
+	<div style="text-align: right;">
+							<img id="navigate-down-map" class="navigate-down-arrow" style="position: relative; bottom: 2.5vh; right: 1vw; vertical-align: right;"></img>
+						</div>	
 
     <!-- Call to Action -->
-    <section class="call-to-action bg-primary" id="blog">
+    <section class="call-to-action bg-primary" id="contact" style="margin-bottom: 16em;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-				<h2>Blog</h2>
+				<!--<h2>Contact</h2>
                     <hr class="small">
                     <a href="#" class="btn btn-lg btn-light">Click Me!</a>
                     <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-					
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
 
     <!-- Map -->
     <section id="map-contact" class="map">
-	<a onclick="enable_disable_map();" class="btn btn-lg btn-dark" id="enable-map-button">Enable Map</a>
+	<div class="switch" style="text-align: center; vertical-align: center; ">
+		<input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox" style="vertical-align: center;">
+		<label id="cmn-toggle-1-label" for="cmn-toggle-1" style="position: relative; margin: 5px auto 15px; "></label>
+		<a onclick="handleMap();" class="btn btn-lg btn-dark" id="enable-map-button" >Press to <b>Enable Map</b></a>
+	</div>
+	
 	   <iframe id="map-canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143322.87425360736!2d-4.372539396432729!3d55.85538065369904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1spt-PT!2sus!4v1452093233018" width="100%" height="450" frameborder="0" style="border:0; margin-top: 2.7em;" allowfullscreen></iframe> <br />
 		<small>
 			<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143322.87425360736!2d-4.372539396432729!3d55.85538065369904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1spt-PT!2sus!4v1452093233018"></a>
@@ -357,7 +735,7 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:pcanilho.eng.dev@gmail.com">pcanilho.eng.dev@gmail.com</a>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:pcanilho.teleng@gmail.com">pcanilho.teleng@gmail.com</a>
                         </li>
                     </ul>
                     <br>
@@ -373,7 +751,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Paulo Canilho &copy; Online Portfolio</p>
+                    <p class="text-muted" >Paulo Canilho &copy; Online Portfolio</p>
 					<p class="text-muted">Style - Design - Scripting <p class="text-muted"> by </p><p class="text-muted">Paulo Canilho</p></p>
                 </div>
             </div>
@@ -394,6 +772,39 @@
 	<script src="js/library/jquery.ui.min.js" 		      type="text/javascript"></script>
 	<script src="js/main.js" 						      type="text/javascript"></script>
 	<script src="js/library/livereload.js" 			      type="text/javascript"></script>
+	
+	<!-- HIGHLIGHT CONTENT -->
+	<script src="js/component/highlight_content.js" 			      type="text/javascript"></script>
+	
+	<!-- PROJECT CHOOSER -->
+	<script src="js/component/projectChooser.js" 		  type="text/javascript"></script>
+	
+	<!-- TABBED PROJECTS -->
+	<script src="js/component/tabbedProjects.js" 		  type="text/javascript"></script>
+	
+	<!-- PHOTO SLIDER -->
+	<script src="js/component/photoSlicer.js" 			  type="text/javascript"></script>
+	<script src="js/library/sliceBox.js" 			      type="text/javascript"></script>
+	<script src="js/component/photoSlicer-handler.js"     type="text/javascript"></script>
+	
+	<!-- SWDEV SLIDESHOW-->
+	<script src="js/component/sdev-slideshow.js" 		  type="text/javascript"></script>
+	
+	
+	<!-- SLIDEHOW 
+	<script src="js/component/slideshow.js" 		  type="text/javascript"></script>
+	<script type="text/javascript" src="js/library/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/library/jssor.slider.mini.js"></script>-->
+	
+	<!-- FRAME STACKING -->
+	<!--<script src="js/library/jquery.stacks.js" 			  type="text/javascript"></script>-->
+	
+	
+	<!-- SMOOTH SCROLL -->
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"  type="text/javascript"></script>
+	<script src="js/library/jQuery.scrollSpeed.js"			    	  type="text/javascript"></script>-->
+
+	
 	
 	<!-- Skill's Progress bar animation -->
 	<!--<script src="js/component/skillsProgressBar_anim.js"></script>-->
