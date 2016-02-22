@@ -1,0 +1,12 @@
+#online-portfolio-button {
+	position: absolute; 
+	top: 12em; 
+	right: 10em;
+	content: url(../../img/portfolio/menu/online-portofilio.png);
+	z-index: 1;
+	cursor: pointer;
+}
+
+#online-portfolio-button:hover {
+	content: url(../../img/portfolio/menu/online-portofilio-hover.png);
+}

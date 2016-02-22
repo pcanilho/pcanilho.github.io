@@ -1,0 +1,34 @@
+	<img src="img/portfolio/data/GS-section.gif" style="display: block; margin: 0 auto 1em; width: 80px; height: 80px;"></img>
+										<div style="text-align: justify;">
+											<a href="https://maps.cern.ch/mapsearch/">GIS Portal - General</a><i style="float: right;">(No Authentication needed)</i></p>
+											<a href="https://gis.cern.ch/gisportal/IT_Equipment.htm">GIS PORTAL - IT Equipment</a><i style="float: right;">(CERN Authentication needed)</i></p>
+										
+											<hr>
+											&emsp;&ensp;In order to create a logging system for on-site surveys regarding mobile and TETRA networks, an interactive/simple/intuitive interface is needed. For this, the creation of a page in CSDB is shown as the most suited solution.
+											<h5><b>Objectives</b></h5>
+											<ul id="first">
+												<li>Data insertion and manipulation for on-site surveys data;</li>
+												<li>Generalized interface complying with TETRA, GSM, UMTS and LTE network parameters;</li>
+												<li>Clear view of the optional and obligatory fields to create/edit a measurement;</li>
+												<li>Multiple measurements can be made by floor;</li>
+												<li>Network coverage overall level based on the measurements fields.</li>
+											</ul>
+											<img src="img/portfolio/data/gis-portal.png" style="display: block; margin: 0 auto 1em;"></img>
+											<h5><b>Implementation in the GIS Portal</b></h5>
+											&emsp;&ensp;A map representation of these measurements is needed for an overall look over the network status. In order to achieve this, an integration with the Gis Portal is needed. With the overall coverage level per floor, the map layer is coloured accordingly &#45; in resemblance with the &quot;Wifi_coverage&quot; layer in the &quot;IT_Equipment&quot; Gis Portal page.
+											</p>
+											</div>
+										<style>
+												#tetra-pic{
+													cursor: -moz-zoom-in; 
+													cursor: -webkit-zoom-in; 
+													cursor: zoom-in;
+												}									
+										
+										</style>	
+										<hr style="margin-left: 6em; margin-right: 6em;">
+										<p>Fig1. - GIS Portal page - Mockup<t style="float: right;">&emsp;&ensp;Fig2. - GSM Coverage Map - WinProp&reg;</t></p>
+										<figure>
+											<img id="tetra-pic" src="img/portfolio/data/GISPortal-Page-Mockup.PNG" style="display: inline-block; max-width: 18em; max-height: 15em; margin-left: em; margin-right: 2em;  margin-bottom: 2em;" onClick="window.location.href ='img/portfolio/data/GISPortal-Page-Mockup.PNG'"/>
+											<img id="tetra-pic" src="img/portfolio/data/GSM-coverage.png" style="display: inline-block; max-width: 18em; max-height: 15em; float: right;" onClick="window.location.href ='img/portfolio/data/GSM-coverage.png'"/>
+										</figure>

@@ -1,0 +1,45 @@
+<div id="cont" style="text-align: justify;">
+	<div style="text-align: center;"> 
+		<img src="img/portfolio/data/adetti.PNG" style="width: 8vw; max-width: 8vw; height: 3vh;"></img>
+		<img id="arrow-uni" src="img/portfolio/components/arrow-uni.png" style="width: 2vw; max-width: width: 2vw; height: 2vh; margin: 0 1em 0 1em;"></img>
+		<img src="img/portfolio/data/microsoft-logo.png" style="width: 8vw; max-width: 8vw; height: 3vh;"></img>
+		<h4>Research Partnership</h4>
+		<hr style="margin: 0 30% 0 30%;">
+	</div>	
+</p>
+&emsp;&ensp;During both my research grants, first on ADETTI-IUL and then on Microsoft PT, I got the opportunity to work with artificial intelligence. 
+During my first project, I was enrolled of integrating a shape grammar from Professor <b>Phd.</b> <i>Joaquim Reis</i> into a common LISP engine. This process was very interesting since
+LISP is does not only possess a forward solution chaining system such as: JAVA, C++ and other object oriented languages, but also has the hability of backwards solution chaining which 
+will open paths to machine learning and artificial intelligence (creativity).
+</p>
+&emsp;&ensp;On my second project, I got in charge of implementing a backwards solution chaining solution in common LISP and then create a JAVA 7 based GUI for user control.
+Providing that there are few subjects in the world working on the same field, the achieved results were rather satisfatory with the system being capable of recreating users house plants.
+</div>
+	<div style="text-align: center; margin-top: 4em;"> 
+		<img id="LISPprev" src="img/portfolio/data/shapeGrammar-preview.PNG" style="width: 9vw; max-width: 9vw; height: 22vh; border-radius: 12px;" onClick="window.location.href ='img/portfolio/data/shapeGrammar-preview.PNG'"></img>
+		<p>Fig1. - Common LISP Engine - Preview</p>
+	</div>
+<script>
+function loopfade(){
+		$('#cont arrow-uni')
+			.animate({ opacity: 1 })
+			.delay(1500)
+			.animate({ opacity: 0 });
+		$('#cont #arrow-uni')
+		    .animate({ opacity: 0 })
+			.delay(1500)
+			.animate({ opacity: 1 });
+			
+		
+				
+	}	
+	setInterval(loopfade, 1000);
+</script>
+<style>
+												#LISPprev{
+													cursor: -moz-zoom-in; 
+													cursor: -webkit-zoom-in; 
+													cursor: zoom-in;
+												}									
+										
+										</style>	

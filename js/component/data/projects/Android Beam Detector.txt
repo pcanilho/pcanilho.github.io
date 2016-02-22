@@ -1,0 +1,44 @@
+<div style="text-align: justify;">
+<h4 style="text-align: center;">Android and JAVA Beam Statistics Engine</h4>
+<p>For years, both hardware and software engineers have struggled with the
+acquisition of device information in a flexible and fast perspective, numerous
+devices cannot have their status quickly tested due to time limitation associated
+with the travelling to a computer terminal. For instance, in order to test a
+scintillator status, one has to inject beam into the device and quickly return to a
+terminal to see the results, this is not only time demanding but extremely
+inconvenient for the person responsible, it consumes time that would be used in
+more pressing matters. In this train of thoughts, the proposal of creating an
+interface to bring a stable, flexible, user friendly and data driven solution to this
+problem was created. Being the most common operative system for mobile
+display, the Android API proved to have the best efficient in financing, since it is
+based on an open source software, and in implementation difficulty since it’s
+backend development resides in JAVA calls and XML for visual representation.</p></div>
+
+<div style="text-align: center; margin-bottom: 1em;">
+<img id="AndroidBeamDetector" src="img/portfolio/data/AndroidBeamDetector.PNG" style="width: 20vw; height: 6vh; margin-top: 1em;" onClick="window.location.href ='img/portfolio/data/AndroidBeamDetector.PNG'"></img>
+</p>
+Figure 1 - General View of Project Data Driven Architecture
+</div>
+
+<div style="text-align: justify; margin-bottom: 3em;">
+<p>
+The main goal of this project was to make a fully customizable GUI in the
+Android system so that each user could create his own interface with the list of
+devices to watch, server and crates to filter, which mode of datamap generation
+(ex.: Acquisition, EaPiquet), which fields to represent from the datamap file and
+how they should be represented (ex.: profiled, displayed on one line, formatted
+scalar, formatted date, etc.).
+</p>
+
+<p style="font-size: 0.92em;"><b>Note:</b> <a href="mailto:pcanilho.teleng@gmail.com">Contact me</a> for further details</p>
+</div>
+
+
+<style>
+
+#AndroidBeamDetector{
+													cursor: -moz-zoom-in; 
+													cursor: -webkit-zoom-in; 
+													cursor: zoom-in;
+												}	
+</style>

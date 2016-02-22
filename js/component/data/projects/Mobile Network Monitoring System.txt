@@ -1,0 +1,27 @@
+	<img src="img/portfolio/data/momo.png" width="80px" height="80px" style="margin: 0 auto; padding: 10px; display: block;"></img><h4 style="text-align: center;">MOMO - Mobile Monitoring</h4></p><div style="text-align:center">
+	<a  href="https://gsm-migration.web.cern.ch/">https://gsm-migration.web.cern.ch/</a></p>
+	</div><div style="text-align: justify;"></p>&emsp;&ensp;In the year of 2015, with the increasing costs and old equipment maintenance budget, CERN decided to switch Mobile Network operator from Sunrise to Swisscom.  This change had a dramatic effect at CERN due to the positive changes in terms of costs and accessibility to the general user, but also, brought some issues to the Telecommunications Team such as: <p><ul id="first"> <li>Troubleshooting new equipment;</li><li>Troubleshoot general network access;</li><li>Create new documentation for the general user;</li><li>Performance analysis within Switzerland and France - <b>&emsp;&ensp;Public APN</b>;</li><li>Performance analysis and troubleshooting - <b>&emsp;&ensp;CERN's private APN</b>;</li><li>SIM card settings tuning;</li><li>Tunnel Leaky Feeder network analysis and decay statistics.</li></p><img src="img/portfolio/data/cern-it-department.gif" style="display: block; margin: 0 auto;"></img></p>&emsp;&ensp;With these goals in mind, CERN acquired a Mobile Monitoring solution of SwissQual&reg; which had to be implemented from the ground up with CERN's envisioned policies: <ul><li><b>Secure access</b> - SFTP, Encryption, etc.;</li><li><b>24/7 Availability</b> and <b>Sustainability</b>;</li><li><b>"Real-time"</b> Remote Probes monitoring/troubleshooting.</li></ul><p></p></div>
+									
+										<style>
+										
+											#momo-fullscreen-button {
+												background: url(img/portfolio/components/fullscreen.png) no-repeat;
+												float: right;
+												margin: 0 2em 1em 0;
+												background-size: 24px 24px; 
+												width: 24px; 
+												height: 24px; 
+												border: none;
+											}
+											
+											#momo-fullscreen-button:hover {
+												-moz-box-shadow: 0 0 15px #ccc;
+												-webkit-box-shadow: 0 0 15px #ccc;
+												box-shadow: 0 0 15px #ccc;
+											}
+											
+										</style>
+										<hr>
+										<h4 style="color: green;">Presentation Available</h4>
+										<button id="momo-fullscreen-button" onClick="location.href='http://www.pcanilho.com/CERN/';" type="button" style=""></button>
+										<iframe id="momo-presentation-iframe" src="http://www.pcanilho.com/CERN/" style="max-width: 20vw; max-height: 10vh; margin-bottom: 3em;"></iframe>

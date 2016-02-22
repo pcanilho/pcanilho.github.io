@@ -1,0 +1,19 @@
+<style>
+												#watertower{
+													cursor: -moz-zoom-in; 
+													cursor: -webkit-zoom-in; 
+													cursor: zoom-in;
+												}									
+										
+										</style>	
+<div id="solution-img-container" style="text-align: center;">							
+	<figure>
+		<img id="watertower" src="img/portfolio/data/cern-watertower.png"  style="padding: 10px; display: inline-block; float: middle; width: 16vw; height: 13vh;" title="CERN Watertower" onClick="window.location.href ='img/portfolio/data/cern-watertower.png'"></img>
+		<figcaption>Fig.1 - CERN's Watertower TETRA repeater (BTS)
+	</figure>
+</div>			
+
+<div style="text-align: justify;"></p>&emsp;&ensp;In order to also have a monitoring tool for CERN's TETRA network, I was tasked to run several company surveys and meetings which included: Q&A, Budget Discussion, Demonstration and others. 
+In the case of the radio network, the main focus of the monitoring system is to troubleshoot the network configuration and spot bad coverage zones that could be introduced by the network or not. Instead of focusing in the end user experience,
+the tool needs to capture network packets and efforlessly create live statistics for each monitoring probe.
+<p>&emsp;&ensp;A market survey is currently on going at CERN IT department to assess which companies provide the best cost/functionality tool.</p></div>

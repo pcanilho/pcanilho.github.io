@@ -1,0 +1,145 @@
+	<div id="project-display-container">
+							<div class="row">
+								 <div class="col-md-4">
+									<div class="portfolio-item">
+											  <!-- Photos Wrapper -->
+											<div class="wrapper" >
+
+												<ul id="sb-slider" class="sb-slider">
+													<li>
+														<a><img src="img/portfolio/telecom-work.jpg" /></a>
+														<div class="sb-description">
+															<h3>Master Unit &amp; Remote Unit Gateway Configuration</h3>
+														</div>
+													</li>
+													<li>
+														<a><img src="img/portfolio/spectrum-analyser.jpg"/></a>
+														<div class="sb-description">
+															<h3>Network Analysis &amp; General Troubleshooting</h3>
+														</div>
+													</li>
+													<li>
+														<a><img src="img/portfolio/telecom-work-2.jpg" /></a>
+														<div class="sb-description">
+															<h3>WiFi 2.4GHz/Dual Band Troubleshooting</h3>
+														</div>
+													</li>
+													<li>
+														<a><img src="img/portfolio/telecom-work-3.jpg" /></a>
+														<div class="sb-description">
+															<h3>Master Unit &amp; Remote Unit direct signal analysis</h3>
+														</div>
+													</li>
+													
+												</ul>
+
+												<div id="shadow" class="shadow"></div>
+
+												<div id="nav-arrows" class="nav-arrows">
+													<img class="photoSlicer-arrow" src="img/objects/arrow-right.png"></img>
+													<img class="photoSlicer-arrow" src="img/objects/arrow-left.png"></img>
+												</div>
+
+												<!-- Photos Navigation -->
+												<div id="nav-dots" class="nav-dots">
+													<span class="nav-dot-current"></span>
+													<span></span>
+													<span></span>
+													<span></span>											
+												</div>
+
+										</div>
+										<!-- /Photos Wrapper -->
+									</div>
+									<!-- WORK -->
+										
+								</div>
+								<div class="portfolio-item">
+									<div>
+										<hr>
+										<h3>Telecommunications &amp; Radio Engineer 
+										<hr>
+											<p> 
+												<a href="http://www.cern.ch"></a>
+											</p>
+										</h3>
+									
+										<p>
+											<div  style="text-align: justify; text-justify: inter-word;" id="overall">
+												<div class="col" style="margin-left: 4em; width: 40em;">
+													<h4 >
+														Working at CERN
+													</h4>
+													<span class="CCspace">&nbsp;</span><p>&emsp;&ensp;I have been working at CERN (European Organization for Nuclear Research) in Switzerland for the last year and a half. 
+													In my technical student internship with CERN I was working as a Telecommunications &amp; Radio Engineer providing 4th level support for CERN users (3000+ workers) while migrating the old mobile network operator, and correlated equipment, from Sunrise to Swisscom. 
+													Afterwards, in order to achieve network stability, coverage and supply high throughputs over the mobile networks technologies: GSM, UMTS and LTE, I became the responsible for the mobile monitoring system's deployment/implementation/sysadmin/dba. </p>
+													<p>In this project I also had the opportunity to work with TETRA (currently being used by CERN's fire brigade, security teams and tunnel access staff, engineers, physicists and technicians) &amp;
+													TETRAPOL radio technology including: monitoring system, network troubleshooting, SEPURA equipment programming, etc.
+													</p>
+													<hr style="margin-left: 5em; margin-right: 5em;">
+													<h4>Collaboration</h4>
+													<h5><b>Internal</b></h5>
+													<ul>
+														<li>IT-CS-CS/TR</li>
+														<li>IT-CS-CT</li><li>IT-CS-CD</li>
+														<li>IT-GS</li>
+													</ul>
+													<h5><b>External</b></h5>
+													<ul>	
+														<li>SwissQual&reg; <i style="float: right;">Mobile Network Monitoring</i></li>
+														<li>Decodio&reg; <i style="float: right;">TETRA Network Monitoring</i></li>
+														<li>SEPURA&reg;<i style="float: right;">TETRA Equipment</i></li>
+														<li>Swisscom&reg; <i style="float: right;">Mobile network and repeater system equipment</i>
+														</li>
+													</ul>
+												</div>
+												<div class="col">
+												
+												</div>
+											</div>
+										</p>
+										
+									</div>
+								</div>
+							</div>
+							<!-- PROJECTS -->
+							<div class="row">
+								 <div class="col-md-4" >
+									<hr>
+									<h3>Projects and Collaboration</h3>
+									<hr>
+										<div id="projects-choice" class="portfolio-item" style="text-align:left;">
+											<h4>Mobile Network - GSM/UMTS/LTE</h4>
+											<input id="project0" class="project-choice-radio" type="radio" name="projects" value="Mobile Network Monitoring System">
+											<label class="project-choice-label" for="project0" style="min-width: 20em;">Mobile Network Monitoring System	<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<input id="project2" class="project-choice-radio" type="radio" name="projects" value="GIS PORTAL">
+											<label class="project-choice-label" for="project2" style="min-width: 20em;">GIS PORTAL						<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<input id="project3" class="project-choice-radio" type="radio" name="projects" value="Real-time dashboard system">
+											<label class="project-choice-label" for="project3" style="min-width: 20em;">Real-time dashboard system		<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<hr>
+											<h4>TETRA Network</h4>
+											<input id="project1" class="project-choice-radio" type="radio" name="projects" value="TETRA Monitoring System">
+											<label class="project-choice-label" for="project1" style="min-width: 20em;">TETRA Monitoring System			<img src="img/portfolio/components/project.png"/></label>
+											<br>
+											<hr>
+											
+										</div>
+								</div>
+								<!-- PROJECT DETAILS -->
+								 <div class="col-md-8" style="margin-bottom: 5em;">
+									<hr>
+									<h3>Details</h3>
+									<hr>
+									<div id="project-details-container" class="portfolio-item" style="text-align: center;">
+										<span id="project-details-txt" style="position: relative;">
+															
+										</span>
+										</p>
+									</div>
+								</div>
+							</div>
+														
+						
