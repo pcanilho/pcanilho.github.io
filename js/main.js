@@ -90,7 +90,7 @@
 	});
 	$('#navigate-down-map').click(function(){
 		$('html, body').animate({
-		scrollTop: $("#blog").offset().top
+		scrollTop: $("#contact").offset().top
 		}, 1000);
 	});
 	
